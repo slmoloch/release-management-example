@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RepresentativesSite", ".\RepresentativesSite\", "{08FCCA12-4886-4F02-9737-8EDB1A897ACC}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{D33E98C7-292D-4AF4-82C4-672325B70FE2}|RepresentativesDataAccess.dll;{49551135-FB2A-41F8-B3AB-020173DDDDB7}|RepresentativesBusinessLogic.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/RepresentativesSite"
+		Debug.AspNetCompiler.PhysicalPath = "Z:\Temp\RepresentativesSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\RepresentativesSite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/RepresentativesSite"
+		Release.AspNetCompiler.PhysicalPath = "Z:\Temp\RepresentativesSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\RepresentativesSite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "59099"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepresentativesDataAccess", "RepresentativesDataAccess\RepresentativesDataAccess.csproj", "{D33E98C7-292D-4AF4-82C4-672325B70FE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepresentativesBusinessLogic", "RepresentativesBusinessLogic\RepresentativesBusinessLogic.csproj", "{49551135-FB2A-41F8-B3AB-020173DDDDB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08FCCA12-4886-4F02-9737-8EDB1A897ACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08FCCA12-4886-4F02-9737-8EDB1A897ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08FCCA12-4886-4F02-9737-8EDB1A897ACC}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{08FCCA12-4886-4F02-9737-8EDB1A897ACC}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D33E98C7-292D-4AF4-82C4-672325B70FE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33E98C7-292D-4AF4-82C4-672325B70FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33E98C7-292D-4AF4-82C4-672325B70FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33E98C7-292D-4AF4-82C4-672325B70FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49551135-FB2A-41F8-B3AB-020173DDDDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49551135-FB2A-41F8-B3AB-020173DDDDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49551135-FB2A-41F8-B3AB-020173DDDDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49551135-FB2A-41F8-B3AB-020173DDDDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

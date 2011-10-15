@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Representatives" Class="RepDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local)\sqlexpress;Initial Catalog=Representatives;Integrated Security=True" SettingsObjectName="RepresentativesDataAccess.Properties.Settings" SettingsPropertyName="RepresentativesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Region" Member="Regions">
+    <Type Name="Region">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Region_Person" Member="Persons" ThisKey="Id" OtherKey="RegionId" Type="Person" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Person" Member="Persons">
+    <Type Name="Person">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RegionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Actual" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Estimated" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="Region_Person" Member="Region" ThisKey="RegionId" OtherKey="Id" Type="Region" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

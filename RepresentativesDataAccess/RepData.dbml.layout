@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="RepData">
+  <DataContextMoniker Name="/RepDataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4770f2be-77ae-40d7-a4b2-15a26fef19a3" absoluteBounds="0.75, 1.25, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/RepDataDataContext/Region" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd8027b4-ccb7-4dd1-8062-78529817bf95" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a15a4af7-91f7-41ce-9c2d-40cee6c33cff" absoluteBounds="4.875, 1.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/RepDataDataContext/Person" />
+      <nestedChildShapes>
+        <elementListCompartment Id="31c7e3b7-2c64-494f-8aa6-81a15302d5b9" absoluteBounds="4.89, 2.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.03449625651042); (4.875 : 2.03449625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RepDataDataContext/Region/Region_Person" />
+      <nodes>
+        <classShapeMoniker Id="4770f2be-77ae-40d7-a4b2-15a26fef19a3" />
+        <classShapeMoniker Id="a15a4af7-91f7-41ce-9c2d-40cee6c33cff" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

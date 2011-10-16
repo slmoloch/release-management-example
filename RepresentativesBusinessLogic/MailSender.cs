@@ -15,8 +15,11 @@ namespace RepresentativesBusinessLogic
          
             // Use the application or machine configuration to get the 
             // host, port, and credentials.
-            var client = new SmtpClient();
-            client.Send(message);
+
+            using (var client = new SmtpClient())
+            {
+                client.Send(message);
+            }
         }
     }
 }

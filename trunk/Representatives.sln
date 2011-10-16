@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RepresentativesSite", ".\RepresentativesSite\", "{08FCCA12-4886-4F02-9737-8EDB1A897ACC}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RepresentativesSite", "RepresentativesSite\", "{08FCCA12-4886-4F02-9737-8EDB1A897ACC}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		ProjectReferences = "{D33E98C7-292D-4AF4-82C4-672325B70FE2}|RepresentativesDataAccess.dll;{49551135-FB2A-41F8-B3AB-020173DDDDB7}|RepresentativesBusinessLogic.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/RepresentativesSite"
-		Debug.AspNetCompiler.PhysicalPath = "Z:\Temp\RepresentativesSite\"
+		Debug.AspNetCompiler.PhysicalPath = "RepresentativesSite\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\RepresentativesSite\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/RepresentativesSite"
-		Release.AspNetCompiler.PhysicalPath = "Z:\Temp\RepresentativesSite\"
+		Release.AspNetCompiler.PhysicalPath = "RepresentativesSite\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\RepresentativesSite\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepresentativesDataAccess", "RepresentativesDataAccess\RepresentativesDataAccess.csproj", "{D33E98C7-292D-4AF4-82C4-672325B70FE2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepresentativesBusinessLogic", "RepresentativesBusinessLogic\RepresentativesBusinessLogic.csproj", "{49551135-FB2A-41F8-B3AB-020173DDDDB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcceptanceTests", "AcceptanceTests\AcceptanceTests.csproj", "{0962DE13-89DB-49F9-97BA-5C004D7BBD29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{49551135-FB2A-41F8-B3AB-020173DDDDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49551135-FB2A-41F8-B3AB-020173DDDDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49551135-FB2A-41F8-B3AB-020173DDDDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0962DE13-89DB-49F9-97BA-5C004D7BBD29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0962DE13-89DB-49F9-97BA-5C004D7BBD29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0962DE13-89DB-49F9-97BA-5C004D7BBD29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0962DE13-89DB-49F9-97BA-5C004D7BBD29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

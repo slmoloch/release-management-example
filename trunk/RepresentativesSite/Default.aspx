@@ -12,7 +12,8 @@
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
     <script type="text/javascript">
     // <![CDATA[
         var keyValue;
@@ -26,7 +27,7 @@
         }
 
         function SendEmail() {
-            SendMessageCallback.PerformCallback(keyValue + ";" + txtMessage.value);
+            SendMessageCallback.PerformCallback(keyValue + ";" + $("#txtMessage").val());
         }
 
         function OnCallbackComplete(s, e) 

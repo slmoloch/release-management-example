@@ -6,42 +6,25 @@ using AcceptanceTests.Core;
 
 using NUnit.Framework;
 
+using nDumbster.smtp;
+
 namespace AcceptanceTests
 {
     [TestFixture]
     public class SendEmailTest : TestBase
     {
-        private SmtpMock smtpServerMock;
+        SimpleSmtpServer smtpServer;
 
         [SetUp]
-        public void SetUp()
+        public void Setup()
         {
-            smtpServerMock = new SmtpMock();
-            smtpServerMock.Start();
+            smtpServer = SimpleSmtpServer.Start();
         }
-        
+
         [TearDown]
         public void TearDown()
         {
-            smtpServerMock.Stop();
-        }
-
-        [Test]
-        public void SendEmail()
-        {
-            SmtpMail.SmtpServer = "localhost";
-            SmtpMail.Send("somebody@foo.com", "everybody@bar.com", "This is the subject", "This is the body.");
-
-            Thread.Sleep(10000);
-
-
-            Assert.AreEqual(1, ((ICollection)smtpServerMock.Sessions).Count);
-
-            var session = smtpServerMock.Sessions[0];
-            Assert.IsTrue(session.SessionProtocol.IndexOf("somebody@foo.com") > 0);
-            Assert.IsTrue(session.SessionProtocol.IndexOf("everybody@bar.com") > 0);
-            Assert.IsTrue(session.SessionProtocol.IndexOf("This is the subject") > 0);
-            Assert.IsTrue(session.SessionProtocol.IndexOf("This is the body.") > 0);
+            smtpServer.Stop();
         }
 
         [Test]
@@ -54,18 +37,16 @@ namespace AcceptanceTests
                     .ShowEmailPopup()
                     .FillBody("Lama mila ramu")
                     .ClickOnSend();
-
-                Thread.Sleep(5000);
             }
 
-
-            Assert.AreEqual(1, ((ICollection)smtpServerMock.Sessions).Count);
+            Assert.AreEqual(1, smtpServer.ReceivedEmailCount, "1 mails sent");
             
-            var session = smtpServerMock.Sessions[0];
-            Assert.IsTrue(session.SessionProtocol.IndexOf("somebody@foo.com") > 0);
-            Assert.IsTrue(session.SessionProtocol.IndexOf("everybody@bar.com") > 0);
-            Assert.IsTrue(session.SessionProtocol.IndexOf("This is the subject") > 0);
-            Assert.IsTrue(session.SessionProtocol.IndexOf("This is the body.") > 0);
+            var mail = smtpServer.ReceivedEmail[0];
+            Assert.AreEqual("<receiver@there.com>", mail.Headers["To"], "Receiver");
+            Assert.AreEqual("<sender@here.com>", mail.Headers["From"], "Sender");
+            Assert.AreEqual("Test", mail.Headers["Subject"], "Subject");
+
+            Assert.AreEqual("Test Body", mail.Body, "Lama mila ramu");
         }
     }
 }

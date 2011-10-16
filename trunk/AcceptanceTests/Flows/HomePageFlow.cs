@@ -34,6 +34,7 @@ namespace AcceptanceTests.Flows
         public HomePageFlow ClickOnSend()
         {
             home.SendButton.Click();
+            Thread.Sleep(3000);
 
             return this;
         }

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8F2B35E3-C714-4E79-B00B-5A291DC496D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Actions</RootNamespace>
+    <AssemblyName>Actions</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="sharpzlib">
+      <HintPath>..\_dependencies\sharpzlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildStructure.cs" />
+    <Compile Include="FileSystem.cs" />
+    <Compile Include="FileSystemLogDecorator.cs" />
+    <Compile Include="IBuildStructureConfig.cs" />
+    <Compile Include="IFileSystem.cs" />
+    <Compile Include="IMsBuildCompilerConfig.cs" />
+    <Compile Include="INUnitRunnerConfigAdapterConfig.cs" />
+    <Compile Include="IShellCommand.cs" />
+    <Compile Include="IShellCommandFactory.cs" />
+    <Compile Include="IShellRemoteCommandStaticConfig.cs" />
+    <Compile Include="IToolsStructureConfig.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="MsBuildCompiler.cs" />
+    <Compile Include="MsBuildReportingCompiler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShellCommandFactory.cs" />
+    <Compile Include="ShellCommandLogDecorator.cs" />
+    <Compile Include="ShellLocalCommand.cs" />
+    <Compile Include="ShellLocalCommandConfig.cs" />
+    <Compile Include="ShellRemoteCommand.cs" />
+    <Compile Include="ShellRemoteCommandConfig.cs" />
+    <Compile Include="StringFormatExtensions.cs" />
+    <Compile Include="ToolsStructure.cs" />
+    <Compile Include="XslTransformRunner.cs" />
+    <Compile Include="ZipArchiver.cs" />
+    <Compile Include="ZipItem.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

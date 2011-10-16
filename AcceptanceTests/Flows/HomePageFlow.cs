@@ -26,6 +26,7 @@ namespace AcceptanceTests.Flows
         public HomePageFlow FillBody(string body)
         {
             home.BodyText.SetText(body);
+            Thread.Sleep(1000);
 
             return this;
         }

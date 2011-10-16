@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Threading;
-using System.Web.Mail;
-
-using AcceptanceTests.Core;
+﻿using AcceptanceTests.Core;
 
 using NUnit.Framework;
 
@@ -42,11 +38,11 @@ namespace AcceptanceTests
             Assert.AreEqual(1, smtpServer.ReceivedEmailCount, "1 mails sent");
             
             var mail = smtpServer.ReceivedEmail[0];
-            Assert.AreEqual("<receiver@there.com>", mail.Headers["To"], "Receiver");
-            Assert.AreEqual("<sender@here.com>", mail.Headers["From"], "Sender");
-            Assert.AreEqual("Test", mail.Headers["Subject"], "Subject");
+            Assert.AreEqual("slmoloch@gmail.com", mail.Headers["To"], "Receiver");
+            Assert.AreEqual("ben@contoso.com", mail.Headers["From"], "Sender");
+            Assert.AreEqual("Hi From Test Application", mail.Headers["Subject"], "Subject");
 
-            Assert.AreEqual("Test Body", mail.Body, "Lama mila ramu");
+            Assert.AreEqual("Lama mila ramu\r\n", mail.Body);
         }
     }
 }

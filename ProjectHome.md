@@ -1,0 +1,1 @@
+This project is intended to be an example of release management procedure for demonstration reasons.
